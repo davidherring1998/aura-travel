@@ -6,7 +6,7 @@ const User = require("./User");
 const viewSchema = new Schema({
   viewText: {
     type: String,
-    required: true,
+    // required: true,
     minlength: 1,
     maxLength: 300,
   },
@@ -14,7 +14,7 @@ const viewSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  userName: [User.schema],
+  // userName: [User.schema],
 });
 
 const View = mongoose.model("View", viewSchema);

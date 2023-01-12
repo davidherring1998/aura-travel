@@ -1,7 +1,10 @@
 const db = require("./connection");
-const { User, Waves, View } = require("../models");
+const { User, View, Waves } = require("../models");
 
 db.once("open", async () => {
+
+  await View.deleteMany();
+
   const views = await View.insertMany([
     {
       viewText:
@@ -27,11 +30,13 @@ db.once("open", async () => {
 
   console.log("view is Seeded");
 
+  await User.deleteMany();
+
   await User.create({
-    userName: "testUser",
+    userName: "hey",
     firstName: "fname",
     lastName: "lname",
-    email: "email@email.com",
+    email: "email@you.com",
     password: "abc12345",
   });
   await User.create({
@@ -57,6 +62,8 @@ db.once("open", async () => {
   });
 
   console.log("users seeded");
+
+  await Waves.deleteMany();
 
   const wave = await Waves.insertMany([
     {

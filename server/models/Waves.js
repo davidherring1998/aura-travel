@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
-// const User = require("./User");
 
 const wavesSchema = new Schema({
   waveBody: {

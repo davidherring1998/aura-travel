@@ -14,7 +14,7 @@ const viewSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  // userName: [User.schema],
+  userName: [User.schema],
 });
 
 const View = mongoose.model("View", viewSchema);

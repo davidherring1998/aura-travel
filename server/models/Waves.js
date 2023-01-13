@@ -14,12 +14,12 @@ const wavesSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  // userName: [User.schema],
-  // view: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "View",
-  //   required: true,
-  // },
+  userName: [User.schema],
+  view: {
+    type: Schema.Types.ObjectId,
+    ref: "View",
+    required: true,
+  },
 });
 
 const Waves = mongoose.model("Waves", wavesSchema);

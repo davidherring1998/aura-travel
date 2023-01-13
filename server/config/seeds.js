@@ -60,6 +60,12 @@ db.once("open", async () => {
     lastName: "lname",
     email: "email@you.com",
     password: "abc12345",
+    views: [
+      {
+        viewText: views[2].viewText,
+        wave: wave[3]._id,
+      },
+    ],
   });
   await User.create({
     userName: "testUserTwo",
@@ -67,6 +73,12 @@ db.once("open", async () => {
     lastName: "lname",
     email: "emailTwo@email.com",
     password: "abc12345",
+    views: [
+      {
+        viewText: views[3].viewText,
+        wave: wave[0]._id,
+      },
+    ],
   });
   await User.create({
     userName: "testUserThree",
@@ -87,6 +99,12 @@ db.once("open", async () => {
     lastName: "lname",
     email: "emailFour@email.com",
     password: "abc12345",
+    views: [
+      {
+        viewText: views[1].viewText,
+        wave: wave[2]._id,
+      },
+    ],
   });
 
   console.log("users seeded");

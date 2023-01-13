@@ -1,2 +1,2 @@
-const { User, View, Waves } = require("../models");
-module.exports = resolvers;
+// const { User, View, Waves } = require("../models");
+// module.exports = resolvers;

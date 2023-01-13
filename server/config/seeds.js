@@ -1,5 +1,5 @@
 const db = require("./connection");
-const { User, View, Waves } = require("../models");
+const { User, View, Waves} = require("../models");
 
 db.once("open", async () => {
 
@@ -8,7 +8,7 @@ db.once("open", async () => {
   const views = await View.insertMany([
     {
       viewText:
-        "Lorem Ipewrwersum is simply dummy text of the printing and typesetting industry",
+        "Hey this is working// Lorem Ipewrwersum is simply dummy text of the printing and typesetting industry",
     },
     {
       viewText:
@@ -69,22 +69,18 @@ db.once("open", async () => {
     {
       waveBody:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    },    
+    {
+      waveBody:
+        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
     },
     {
       waveBody:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
     },
     {
       waveBody:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    },
-    {
-      waveBody:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    },
-    {
-      waveBody:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
     },
   ]);
   console.log("waves seeded..");

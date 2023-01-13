@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
-const User = require("./User");
+// const User = require("./User");
 
 const viewSchema = new Schema({
   viewText: {
@@ -14,7 +14,6 @@ const viewSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  userName: [User.schema],
 });
 
 const View = mongoose.model("View", viewSchema);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
-const User = require("./User");
+// const User = require("./User");
 
 const wavesSchema = new Schema({
   waveBody: {
@@ -13,12 +13,6 @@ const wavesSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-  },
-  userName: [User.schema],
-  view: {
-    type: Schema.Types.ObjectId,
-    ref: "View",
-    required: true,
   },
 });
 

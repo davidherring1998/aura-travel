@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Aura-travlers:Travelers@arua-travelers.wxszlkl.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Aura-Travelers', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

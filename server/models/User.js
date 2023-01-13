@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 const bcrypt = require("bcrypt");
+const View = require("./View");
 
 const userSchema = new Schema({
   userName: {
@@ -31,6 +32,7 @@ const userSchema = new Schema({
     minlength: 8,
     maxLength: 16,
   },
+  views: [View.schema],
 });
 
 userSchema.pre("save", async function (next) {

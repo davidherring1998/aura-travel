@@ -1,8 +1,7 @@
 const db = require("./connection");
-const { User, View, Waves} = require("../models");
+const { User, View, Waves } = require("../models");
 
 db.once("open", async () => {
-
   await View.deleteMany();
 
   const views = await View.insertMany([
@@ -30,6 +29,29 @@ db.once("open", async () => {
 
   console.log("view is Seeded");
 
+  await Waves.deleteMany();
+
+  const wave = await Waves.insertMany([
+    {
+      waveBody:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+    {
+      waveBody:
+        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+    {
+      waveBody:
+        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+    {
+      waveBody:
+        " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+  ]);
+
+  console.log("waves seeded..");
+
   await User.deleteMany();
 
   await User.create({
@@ -52,6 +74,12 @@ db.once("open", async () => {
     lastName: "lname",
     email: "emailThree@email.com",
     password: "abc12345",
+    views: [
+      {
+        viewText: views[0].viewText,
+        wave: wave[1]._id,
+      },
+    ],
   });
   await User.create({
     userName: "testUserFour",
@@ -62,28 +90,6 @@ db.once("open", async () => {
   });
 
   console.log("users seeded");
-
-  await Waves.deleteMany();
-
-  const wave = await Waves.insertMany([
-    {
-      waveBody:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    },    
-    {
-      waveBody:
-        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
-    },
-    {
-      waveBody:
-        "Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
-    },
-    {
-      waveBody:
-        " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
-    },
-  ]);
-  console.log("waves seeded..");
 
   process.exit();
 });

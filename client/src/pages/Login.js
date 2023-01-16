@@ -12,7 +12,7 @@ function Login(props) {
     e.preventDefault();
     try {
       const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
+        variables: { userName: formState.userName, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
@@ -35,12 +35,12 @@ function Login(props) {
       <h1>Login</h1>
       <form onSubmit={{ handleFormSubmit }}>
         <div>
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="userName">Email address:</label>
           <input
-            placeholder="email@email.com"
-            name="email"
-            type="email"
-            id="email"
+            placeholder="username.."
+            name="userName"
+            type="userName"
+            id="userName"
             onChange={handleChange}
           />
         </div>

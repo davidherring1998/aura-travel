@@ -6,10 +6,12 @@ const typeDefs = gql`
   }
 
   type View {
+    _id: ID
     viewText: String
   }
 
   type Waves {
+    _id: ID
     waveBody: String
   }
 

@@ -3,6 +3,7 @@ const typeDefs = gql`
   type User {
     _id: ID
     userName: String
+    
   }
 
   type View {
@@ -28,7 +29,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(
-      username: String!
+      userName: String!
       firstName: String!
       lastName: String!
       email: String!
@@ -36,7 +37,7 @@ const typeDefs = gql`
     ): Auth
     addView(viewText: String!): View
     updateUser(
-      username: String
+      userName: String
       firstName: String
       lastName: String
       email: String

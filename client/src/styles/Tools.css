@@ -1,0 +1,13 @@
+.toolContainer {
+    height: 500px;
+    border: solid 3px black;
+    border-radius: 7px;
+    width: 700px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(88, 86, 86);
+    color: greenyellow;
+
+}

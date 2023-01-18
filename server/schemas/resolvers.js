@@ -19,7 +19,8 @@ const resolvers = {
       const user = await User.create(args);
       const token = signToken(user);
 
-      return { token, user };
+      // return {  user };
+      return {token, user}
     },
     addView: async (parent, { wave }, context) => {
       console.log(context);

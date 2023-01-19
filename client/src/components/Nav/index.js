@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/Nav.css";
+import { AiOutlineGithub } from "react-icons/ai";
+
 // import Auth from "../../utils/auth";
 // import { Link } from "react-router-dom";
 
@@ -8,7 +10,6 @@ function Nav() {
     <>
       <header>
         <h1>Aura Travel</h1>
-
       </header>
       <nav>
         <ul>
@@ -18,9 +19,11 @@ function Nav() {
           <li> Tools </li>
         </ul>
       </nav>
-      <footer>Footer Content Here</footer>
+      <footer>
+        Footer Content Here <p className="fa fa-github icons"></p>
+      </footer>
     </>
-  )
+  );
 }
 
 export default Nav;

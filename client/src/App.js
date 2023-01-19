@@ -36,6 +36,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        <Tools />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

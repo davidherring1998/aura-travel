@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import {
 //     ApolloClient,
 //     InMemoryCache,
@@ -8,9 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home';
-import Nav from './components/Nav';
-import Tools from './components/Tools'
+import Home from "./pages/Home";
+import Nav from "./components/Nav";
+import Tools from "./components/Tools";
 
 // const httpLink = createHttpLink({
 //     uri: '/graphql',
@@ -31,23 +31,18 @@ import Tools from './components/Tools'
 // });
 
 function App() {
-    return (
-        //<ApolloProvider client={client}>
-        <Router>
-            <div>
-                <Nav />
-                <Tools />
-                <Routes>
-                    <Route
-                        path='/'
-                        element={<Home />}
-                    />
-
-                </Routes>
-            </div>
-        </Router>
-        //</ApolloProvider>
-    );
+  return (
+    //<ApolloProvider client={client}>
+    <Router>
+      <div>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
+    //</ApolloProvider>
+  );
 }
 
 export default App;

@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/Nav.css";
-import { AiOutlineGithub } from "react-icons/ai";
 
 // import Auth from "../../utils/auth";
 // import { Link } from "react-router-dom";

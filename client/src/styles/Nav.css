@@ -45,6 +45,9 @@ li {
     font-weight: 1000;
     margin-bottom: 10px;
 }
+.buttonNav {
+    background-color: black;
+}
 
 footer {
     position: fixed;

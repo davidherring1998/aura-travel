@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Nav.css";
 
 import Auth from "../../utils/auth";
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -12,17 +12,27 @@ function Nav() {
       </header>
       <nav>
         <ul>
-          <li> Login </li>
-          <li> Home </li>
-          <li> Profile </li>
-          <li> Tools </li>
+          <button className="buttonNav">
+            <li> Login </li>
+          </button>
+          <button className="buttonNav">
+            <li> Home </li>
+          </button>
+          <button className="buttonNav">
+            <li> Profile </li>
+          </button>
+          <button className="buttonNav">
+            <li> Tools </li>
+          </button>
         </ul>
       </nav>
       <footer>
         <a
           href="https://github.com/jswearingen18"
           className="fa fa-github icons"
-        ></a>
+        >
+          Github
+        </a>
       </footer>
     </>
   );

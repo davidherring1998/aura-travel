@@ -15,9 +15,11 @@ const Home = () => {
     data: dataUser,
   } = useQuery(QUERY_USER);
 
+
   if (loadingUser && loadingView) {
     return <p>Loading</p>;
   }
+
 
   return (
     <body>

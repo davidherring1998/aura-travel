@@ -1,10 +1,13 @@
-import React from "react";
-import logo from "./client/public/Aura-black.png";
+// import logo from "../assets/images/Aura-black.png";
 
-console.log(logo);
+// export default function App() {
+//     return <img src={logo} alt="aura hero" />
+// }
 
-function Header() {
-    return <img src={logo} alt="Logo" />;
-}
 
-export default Header;
+ // }
+// function Header() {
+//     return <img src={logo} alt="Logo" />;
+// }
+
+// export default Header;

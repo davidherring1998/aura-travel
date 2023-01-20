@@ -3,8 +3,8 @@
     border: solid 3px black;
     border-radius: 7px;
     width: 700px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 32.5%;
+    margin-right: 32.5%;
     margin-top: 20px;
     text-align: center;
     background-color: rgb(88, 86, 86);
@@ -67,6 +67,7 @@
 .navigation:hover {
     height: 200px;
     width: 200px;
+  
 }
 .weather:hover {
     height: 200px;

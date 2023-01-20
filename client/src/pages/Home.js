@@ -1,10 +1,8 @@
 import React from "react";
+import "../styles/Home.css";
 
 const Home = () => {
-  return (
-    <div> Hey </div>
-  )
+  return <body></body>;
 };
 
-
-export default Home; 
+export default Home;

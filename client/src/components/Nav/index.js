@@ -1,7 +1,5 @@
 import React from "react";
 import "../../styles/Nav.css";
-import { AiOutlineGithub } from "react-icons/ai";
-
 // import Auth from "../../utils/auth";
 // import { Link } from "react-router-dom";
 
@@ -20,7 +18,10 @@ function Nav() {
         </ul>
       </nav>
       <footer>
-        Footer Content Here <p className="fa fa-github icons"></p>
+        <a
+          href="https://github.com/jswearingen18"
+          className="fa fa-github icons"
+        ></a>
       </footer>
     </>
   );

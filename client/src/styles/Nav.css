@@ -14,8 +14,12 @@
 
 header {
     background-color: rgb(58, 57, 57);
-    height: 150px;
+    height: 230px;
     color: aliceblue;
+    background-image: url("../../public/aura-logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 

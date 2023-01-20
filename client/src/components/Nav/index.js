@@ -1,8 +1,8 @@
 import React from "react";
 import "../../styles/Nav.css";
 
-// import Auth from "../../utils/auth";
-// import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
+ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -19,7 +19,10 @@ function Nav() {
         </ul>
       </nav>
       <footer>
-        Footer Content Here <p className="fa fa-github icons"></p>
+        <a
+          href="https://github.com/jswearingen18"
+          className="fa fa-github icons"
+        ></a>
       </footer>
     </>
   );

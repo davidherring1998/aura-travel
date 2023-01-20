@@ -15,6 +15,7 @@ const Home = () => {
     data: dataUser,
   } = useQuery(QUERY_USER);
   console.log(dataUser);
+  console.log(dataView);
   console.log(errorUser);
   console.log(errorView);
   console.log(loadingUser);

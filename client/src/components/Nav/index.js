@@ -8,7 +8,6 @@ function Nav() {
   return (
     <>
       <header>
-        <h1>Aura Travel</h1>
       </header>
       <nav>
         <ul>

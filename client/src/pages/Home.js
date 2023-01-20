@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import { useQuery } from "@apollo/client";
 import { QUERY_VIEW, QUERY_USER } from "../utils/queries";
@@ -14,15 +14,24 @@ const Home = () => {
     error: errorUser,
     data: dataUser,
   } = useQuery(QUERY_USER);
-  console.log(dataUser);
-  console.log(dataView);
-  console.log(errorUser);
-  console.log(errorView);
-  console.log(loadingUser);
-  console.log(loadingView);
+
+
+  if (loadingUser && loadingView) {
+    return <p>Loading</p>;
+  }
+
+
   return (
     <body>
-      <p>{dataView.view[0].viewText}</p>
+      <div>
+        {dataView?.view?.map((view, index) => {
+          return (
+            <p className="singleViews" key={index}>
+              {view.viewText}
+            </p>
+          );
+        })}
+      </div>
     </body>
   );
 };

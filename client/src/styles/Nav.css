@@ -18,6 +18,7 @@ header {
     color: aliceblue;
 }
 
+
 h1 {
     font-size: 30px;
     text-align: center;
@@ -66,6 +67,38 @@ nav li {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+
+.calendarContainer {
+    margin-bottom: 250px;
+    border: solid 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #412234;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.textCenter {
+    margin: 10px;
+}
+
+.calendarComps {
+    margin: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 7px;
+    background-color: #0D5D56;
+}
+
+.calendarHeader {
+    background-color: #0D5D56;
+    border: solid 5px black;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 30px;
 }
 
 @keyframes background-pan {

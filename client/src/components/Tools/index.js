@@ -1,12 +1,13 @@
 import React from "react";
 import "../../styles/Tools.css";
+// import ToolNavigation from "./CurrentTool";
 
-function Tools() {
+function Tools(handlePageChange) {
   return (
     <div className="toolContainer">
       <div className="weather">
         <div className="widgetContainer">
-          <span>Weather</span>
+          <span onClick={() => handlePageChange("Weather")}>Weather</span>
         </div>
       </div>
       <div className="calculator">
@@ -16,7 +17,7 @@ function Tools() {
       </div>
       <div className="navigation">
         <div className="widgetContainer">
-          <span>Navigation</span>
+          <span onClick={() => handlePageChange("Navigation")}>Navigation</span>
         </div>
       </div>
       <div className="translator">

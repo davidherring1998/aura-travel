@@ -14,7 +14,7 @@ import Calendar from "react-calendar";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Tools from "./components/Tools";
-import Navigation from "./components/Tools/Maps/Maps";
+import Maps from './components/Tools/Maps/Maps'
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -42,9 +42,10 @@ function App() {
         <div>
           <Nav />
           <Tools />
+          <Maps />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/navigation" element={<Navigation />} />
+            <Route path="/navigation" element={<Maps />} />
           </Routes>
         </div>
         <div className="calendar">

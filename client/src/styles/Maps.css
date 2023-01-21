@@ -1,35 +1,70 @@
+.container{
+    width: 90%;
+    /* background-color: red; */
+    margin-left: 5%;
+    padding-top: 1px;
+    height: 550px;
+}
+
 .mapContainer {
     background-color: white;
     margin-top: 3.85%;
     margin-left: 25%;
     padding: 35px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    display: block;
     position: relative;
     align-items: center;
-    height: 80px;
+    height: 800px;
     width: 50%;
 }
 
-#origin {
-    margin-right:60px
-}
-
-#destination{
-    margin-right: 50px;
-}
-
-.mapResults {
-    margin-right: 80%; 
-    display: flex;
-    flex-direction: column;
-}
-
-.mapResults p {
-    margin-left: 95px;
-}
-
 .mapDiv{
-    height: 500px;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    height: 350px;
+    width: 50%;
+    border: 2px solid black;
 }
 
+.mapInputContainer{
+    background-color: lightblue;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.input {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.btn {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: red;
+}
+
+
+
+
+.resultDiv {
+    margin-left: 20%;
+    padding: 10px;
+}
+
+.result {
+    margin-top: 5px;
+}

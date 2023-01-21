@@ -5,6 +5,9 @@ export const QUERY_USER = gql`
     user {
       _id
       userName
+      views {
+        viewText
+      }
     }
   }
 `;

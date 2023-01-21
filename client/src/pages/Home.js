@@ -14,20 +14,26 @@ const Home = () => {
     error: errorUser,
     data: dataUser,
   } = useQuery(QUERY_USER);
-
+  console.log(dataUser.userName);
 
   if (loadingUser && loadingView) {
     return <p>Loading</p>;
   }
-
 
   return (
     <body>
       <div>
         {dataView?.view?.map((view, index) => {
           return (
-            <p className="singleViews" key={index}>
+            <div className="singleViews" key={index}>
               {view.viewText}
+            </div>
+          );
+        })}
+        {dataUser?.user?.map((user, index) => {
+          return (
+            <p className="singleViews" key={index}>
+              {user.userName}
             </p>
           );
         })}

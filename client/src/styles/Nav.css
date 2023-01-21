@@ -16,8 +16,8 @@ header {
     background-color: rgb(58, 57, 57);
     height: 230px;
     color: aliceblue;
-    background-image: url("../../public/aura-logo.png");
-    background-size: cover;
+    background-image: url("../../public/circlelogo.png");
+    background-size:contain;
     background-repeat: no-repeat;
     
 }

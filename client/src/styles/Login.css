@@ -1,0 +1,40 @@
+
+.loginStyle {
+    height: 70px;
+    width: 96%;
+    border-radius: 12px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+.loginSubmit {
+    border: solid 2px black;
+    border-radius: 12px;
+    margin-left: 800px;
+    width: 80px;
+    height: 25px;
+    color: aliceblue;
+    background-color: black;
+}
+
+.loginFormBox {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    border: solid 3px black;
+    color: greenyellow;
+    background: rgb(52, 51, 51);
+    height: 150px;
+    border-radius: 12px;
+}
+
+.signupBTN {
+    border: solid 2px black;
+    color: aliceblue;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: black;
+}

@@ -5,10 +5,57 @@ body {
 .singleViews {
     margin-left: 150px;
     margin-right: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border: solid 3px black;
     border-radius: 12px;
     color: greenyellow;
     background-color: black;
+}
+
+.viewFormBox {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    border: solid 3px black;
+    color: greenyellow;
+    background: rgb(52, 51, 51);
+    height: 150px;
+    border-radius: 12px;
+}
+
+.viewStyle {
+    height: 70px;
+    width: 96%;
+    border-radius: 12px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+.userHeader {
+    border: solid 2px rgb(187, 41, 41);
+    border-radius: 12px;
+    background-color: rgb(56, 54, 54);
+    width: 10%;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.viewSubmit {
+    border: solid 2px black;
+    border-radius: 12px;
+    margin-left: 800px;
+    width: 80px;
+    height: 25px;
+    color: aliceblue;
+    background-color: black;
+}
+::placeholder {
+    color: aliceblue;
+    text-align: center;
 }

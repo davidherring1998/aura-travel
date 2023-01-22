@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/Nav.css";
-
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
@@ -18,19 +17,23 @@ function Nav() {
           <Link to="/" className="buttonNav">
             Home
           </Link>
-          <Link className="buttonNav">Profile</Link>
+          <Link to="/profile" className="buttonNav">
+            Profile
+          </Link>
           <Link to="/tools" className="buttonNav">
             Tools{" "}
           </Link>
         </ul>
       </nav>
       <footer>
-        <a
-          href="https://github.com/jswearingen18"
-          className="fa fa-github icons"
-        >
-          Github
-        </a>
+        <div className="iconBox">
+          <a
+            href="https://github.com/jswearingen18"
+            className="fa fa-github icons"
+          >
+            Github
+          </a>
+        </div>
       </footer>
     </>
   );

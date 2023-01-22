@@ -17,6 +17,7 @@ import Tools from "./pages/AuraTools/AuraTools";
 import Maps from "./components/Tools/Maps/Maps";
 import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
+import Profile from "../src/pages/Profile";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -47,7 +48,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/profile" element={<Profile />} /> */}
+            <Route path="/profile" element={<Profile />} />
             <Route path="/navigation" element={<Maps />} />
             <Route path="/tools" element={<Tools />} />
           </Routes>

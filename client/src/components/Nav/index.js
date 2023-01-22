@@ -12,18 +12,16 @@ function Nav() {
       </header>
       <nav>
         <ul>
-          <button className="buttonNav">
-            <li> Login </li>
-          </button>
-          <button className="buttonNav">
-            <li> Home </li>
-          </button>
-          <button className="buttonNav">
-            <li> Profile </li>
-          </button>
-          <button className="buttonNav">
-            <li> Tools </li>
-          </button>
+          <Link to="/login" className="buttonNav">
+            Login
+          </Link>
+          <Link to="/" className="buttonNav">
+            Home
+          </Link>
+          <Link className="buttonNav">Profile</Link>
+          <Link to="/tools" className="buttonNav">
+            Tools{" "}
+          </Link>
         </ul>
       </nav>
       <footer>

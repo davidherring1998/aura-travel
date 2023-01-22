@@ -13,8 +13,10 @@ import Calendar from "react-calendar";
 
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
-import Tools from "./components/Tools";
-import Maps from './components/Tools/Maps/Maps'
+import Tools from "./pages/AuraTools/AuraTools";
+import Maps from "./components/Tools/Maps/Maps";
+import Signup from "../src/pages/Signup";
+import Login from "../src/pages/Login";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -41,23 +43,14 @@ function App() {
       <Router>
         <div>
           <Nav />
-          <Tools />
-          <Maps />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            {/* <Route path="/profile" element={<Profile />} /> */}
             <Route path="/navigation" element={<Maps />} />
+            <Route path="/tools" element={<Tools />} />
           </Routes>
-        </div>
-        <div className="calendar">
-          <h1 className="calendarHeader">Aura Travel Calendar</h1>
-          <div className="calendarContainer">
-            <Calendar
-              className="calendarComps"
-              onChange={setDate}
-              value={date}
-            />
-          </div>
-          <div className="textCenter">Selected date: {date.toDateString()}</div>
         </div>
       </Router>
     </ApolloProvider>

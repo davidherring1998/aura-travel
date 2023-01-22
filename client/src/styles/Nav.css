@@ -111,6 +111,19 @@ nav .buttonNav {
     padding-bottom: 30px;
 }
 
+.iconBox {
+    border: solid 3px;
+    background-color: black;
+    color: greenyellow;
+    text-decoration: none;
+    height: 65px;
+    width: 65px;
+}
+
+.githubIcon {
+    color: #0C8346;
+}
+
 @keyframes background-pan {
     from {
         background-position: 0% center;

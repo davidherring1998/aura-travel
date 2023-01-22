@@ -1,6 +1,6 @@
 
 .loginStyle {
-    height: 70px;
+    height: 50px;
     width: 96%;
     border-radius: 12px;
     margin-top: 15px;
@@ -13,7 +13,8 @@
 .loginSubmit {
     border: solid 2px black;
     border-radius: 12px;
-    margin-left: 800px;
+    margin-left: 1000px;
+    margin-bottom: 20px;
     width: 80px;
     height: 25px;
     color: aliceblue;
@@ -27,8 +28,9 @@
     border: solid 3px black;
     color: greenyellow;
     background: rgb(52, 51, 51);
-    height: 150px;
     border-radius: 12px;
+    margin-bottom: 125px;
+    padding-top: 15px;
 }
 
 .signupBTN {
@@ -37,4 +39,11 @@
     border-radius: 12px;
     text-decoration: none;
     background-color: black;
+    margin-left: 20px;
+    margin-top: 20px;
 }
+
+.loginLabel {
+    margin-left: 20px;
+}
+

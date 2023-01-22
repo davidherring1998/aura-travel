@@ -34,42 +34,46 @@ function Login(props) {
   };
 
   return (
+    <div className="loginFormBox">
+      <Link className="signupBTN" to="/signup">
+        Click here to sign up!
+      </Link>
+      <h1 className="loginHeader">Login</h1>
       <div className="loginFormBox">
-        <div>
-          <Link className="signupBTN" to="/signup">
-            Click here to sign up!
-          </Link>
-          <h1>Login</h1>
-          <form onSubmit={{ handleFormSubmit }}>
-            <label htmlFor="userName">Username::</label>
-            <input
-              className="loginStyle"
-              placeholder="username.."
-              name="userName"
-              type="userName"
-              id="userName"
-              onChange={handleChange}
-            />
-            <label htmlFor="pwd">Password:</label>
-            <input
-              className="loginStyle"
-              placeholder="********"
-              name="password"
-              type="password"
-              id="pwd"
-              onChange={handleChange}
-            />
-            {error ? (
-              <div>
-                <p className="errorMsg">Incorrect username or password!</p>
-              </div>
-            ) : null}
-            <button className="loginSubmit" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
+        <form onSubmit={{ handleFormSubmit }}>
+          <label className="loginLabel" htmlFor="userName">
+            Username:
+          </label>
+          <input
+            className="loginStyle"
+            placeholder="username.."
+            name="userName"
+            type="userName"
+            id="userName"
+            onChange={handleChange}
+          />
+          <label className="loginLabel" htmlFor="pwd">
+            Password:
+          </label>
+          <input
+            className="loginStyle"
+            placeholder="********"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+          {error ? (
+            <div>
+              <p className="errorMsg">Incorrect username or password!</p>
+            </div>
+          ) : null}
+          <button className="loginSubmit" type="submit">
+            Submit
+          </button>
+        </form>
       </div>
+    </div>
   );
 }
 

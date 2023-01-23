@@ -16,6 +16,7 @@ import Maps from "./components/Tools/Maps/Maps";
 import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
 import Profile from "../src/pages/Profile";
+import Calculator from "./components/Tools/Calculator/Calculator";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -41,7 +42,7 @@ function App() {
       <Router>
         <div>
           <Nav />
-          <GetCalculator />
+          <Calculator />
           <AuraCalendar />
           <Routes>
             <Route path="/" element={<Home />} />

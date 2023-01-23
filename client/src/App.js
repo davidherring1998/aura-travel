@@ -18,7 +18,6 @@ import Maps from "./components/Tools/Maps/Maps";
 import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
 import Profile from "../src/pages/Profile";
-import GetCalculator from "./components/Tools/Calculator/Calculator";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -45,7 +44,6 @@ function App() {
       <Router>
         <div>
           <Nav />
-          <GetCalculator />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />

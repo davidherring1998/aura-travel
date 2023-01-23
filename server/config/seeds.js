@@ -6,23 +6,24 @@ db.once("open", async () => {
 
   const views = await View.insertMany([
     {
-      viewText: "Hey this is my view about my trip",
-    },
-    {
-      viewText: "Alright let me talk about my trip to Colorado",
-    },
-    {
-      viewText: "Let me share my journey to Florida and the theme parks",
+      viewText:
+        "Hey this is working// Lorem Ipewrwersum is simply dummy text of the printing and typesetting industry",
     },
     {
       viewText:
-        "My trip was not great heres where it went wrong and what could be better",
+        "Lorem Iewwerpsum is simply dummy text of the printing and typesetting industry",
     },
     {
-      viewText: "Trip to Alaska was really killer!!!!",
+      viewText:
+        "Lorem Ipsuewrewm is simply dummy text of the printing and typesetting industry",
     },
     {
-      viewText: "Drive was absolutely terrible do not recommend!!",
+      viewText:
+        "Lorem Ipserweum is simply dummy text of the printing and typesetting industry",
+    },
+    {
+      viewText:
+        "Lorem Ipwerewsum is simply dummy text of the printing and typesetting industry",
     },
   ]);
 
@@ -54,21 +55,23 @@ db.once("open", async () => {
   await User.deleteMany();
 
   await User.create({
-    userName: "crunkichu",
-    firstName: "Jeremiah",
-    lastName: "Swearingen",
-    email: "jswearingen18@gmail.com",
+    userName: "hey",
+    firstName: "fname",
+    lastName: "lname",
+    email: "email@you.com",
     password: "abc12345",
-    views: {
-      viewText: views[2].viewText,
-      wave: wave[3]._id,
-    },
+    views: [
+      {
+        viewText: views[2].viewText,
+        wave: wave[3]._id,
+      },
+    ],
   });
   await User.create({
-    userName: "david@herring",
-    firstName: "David",
-    lastName: "Herring",
-    email: "david.herring@gmail.com",
+    userName: "testUserTwo",
+    firstName: "fname",
+    lastName: "lname",
+    email: "emailTwo@email.com",
     password: "abc12345",
     views: [
       {
@@ -78,10 +81,10 @@ db.once("open", async () => {
     ],
   });
   await User.create({
-    userName: "Linz",
-    firstName: "Lindsay",
-    lastName: "Bae",
-    email: "Lindsay.bae@gmail.com",
+    userName: "testUserThree",
+    firstName: "fname",
+    lastName: "lname",
+    email: "emailThree@email.com",
     password: "abc12345",
     views: [
       {
@@ -91,10 +94,10 @@ db.once("open", async () => {
     ],
   });
   await User.create({
-    userName: "Shelby.Bridwell",
-    firstName: "Shelby",
-    lastName: "Bridwell",
-    email: "Shelby.Bridwell@gmail.com",
+    userName: "testUserFour",
+    firstName: "fname",
+    lastName: "lname",
+    email: "emailFour@email.com",
     password: "abc12345",
     views: [
       {

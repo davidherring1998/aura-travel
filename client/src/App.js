@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,8 +8,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import Calendar from "react-calendar";
-
+import AuraCalendar from "./components/Tools/Calendar/Calendar";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Tools from "./pages/AuraTools/AuraTools";
@@ -39,13 +37,13 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [date, setDate] = useState(new Date());
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
           <Nav />
           <GetCalculator />
+          <AuraCalendar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />

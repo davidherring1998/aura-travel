@@ -1,0 +1,46 @@
+.calculatorContainer {
+    border: solid 3px black;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    border-radius: 12px;
+    padding-bottom: 50px;
+    background-color: #0D5D56;
+}
+
+.calcBTN {
+    height: 50px;
+    width: 25%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
+    border-radius: 12px;
+    margin-top: 3px;
+}
+
+.emptyBox {
+    height: 50px;
+    width: 50%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
+    border-radius: 12px;
+}
+
+.calcBox {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 30px;
+    border: solid 3px black;
+    border-radius: 12px;
+    height: 425px;
+    width: 30%;
+    background-color: rgb(20, 20, 20);
+}
+
+.outputRow {
+    width: 97.75%;
+    border-radius: 12px;
+    height: 60px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 50px;
+}

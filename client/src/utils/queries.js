@@ -16,6 +16,9 @@ export const QUERY_VIEW = gql`
     view {
       _id
       viewText
+      user {
+        userName
+      }
     }
   }
 `;

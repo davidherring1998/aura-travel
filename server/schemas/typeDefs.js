@@ -3,9 +3,6 @@ const typeDefs = gql`
   type User {
     _id: ID
     userName: String
-    firstName: String
-    lastName: String
-    email: String
     views: [View]
   }
 
@@ -26,25 +23,24 @@ const typeDefs = gql`
 
   type Query {
     user: [User]
-    views(user: ID, userName: String): [View]
-    view(_id: ID!): View
-    wave(views: [ID]!): [Waves]
+    view: [View]
+    wave: [Waves]
   }
 
   type Mutation {
     addUser(
-      userName: String!,
-      firstName: String!,
-      lastName: String!,
-      email: String!,
+      userName: String!
+      firstName: String!
+      lastName: String!
+      email: String!
       password: String!
     ): Auth
     addView(viewText: String!): View
     updateUser(
-      userName: String,
-      firstName: String,
-      lastName: String,
-      email: String,
+      userName: String
+      firstName: String
+      lastName: String
+      email: String
       password: String
     ): User
     updateView(_id: ID!): View

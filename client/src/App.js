@@ -1,71 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
-import Calendar from "react-calendar";
-// import {
-//     ApolloClient,
-//     InMemoryCache,
-//     ApolloProvider,
-//     createHttpLink,
-// } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
+import AuraCalendar from "./components/Tools/Calendar/Calendar";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
-import Tools from "./components/Tools";
-// const httpLink = createHttpLink({
-//     uri: '/graphql',
-//     });
+import Tools from "./pages/AuraTools/AuraTools";
+import Maps from "./components/Tools/Maps/Maps";
+import Signup from "../src/pages/Signup";
+import Login from "../src/pages/Login";
+import Profile from "../src/pages/Profile";
+import Calculator from "./components/Tools/Calculator/Calculator";
 
-// const authLink = setContext((_, { headers }) => {
-//     const token = localStorage.getItem('id_token');
-//     return {
-//         headers: {
-//             ...headers,
-//             authorization: token ? `Bearer ${token}` : '',
-//         },
-//     };
-// });
-//     const client = new ApolloClient({
-//     link: authLink.concat(httpLink),
-//     cache: new InMemoryCache(),
-// });
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-    const [date, setDate] = useState(new Date())
-    return (
-        //<ApolloProvider client={client}>
-        <Router>
-            <div>
-                <Nav />
-                <Tools />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                </Routes>
-            </div>
-            <div className="calendar">
-                <h1 className="calendarHeader">Aura Travel Calendar</h1>
-                <div className="calendarContainer">
-                    <Calendar className="calendarComps" onChange={setDate} value={date} />
-                </div>
-                {date.length > 0 ? (
-                    <p>
-                        <span>Start:</span>{' '} {date[0].toDateString()}
-                        &nbsp; to &nbsp;
-                        <span>End:</span> {date[1].toDateString()}
-                    </p>
-                ) : (
-                    <p>
-                        <span>Default selected date:</span>{' '} {date.toDateString()}
-                    </p>
-                )}
-                <div className="textCenter">
-                    Selected date: {date.toDateString()}
-                </div>
-            </div>
-        </Router>
-        //</ApolloProvider>
-    );
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Nav />
+          <Calculator />
+          <AuraCalendar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/navigation" element={<Maps />} />
+            <Route path="/tools" element={<Tools />} />
+          </Routes>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
 
 export default App;

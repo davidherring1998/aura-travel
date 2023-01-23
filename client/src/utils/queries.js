@@ -3,15 +3,18 @@ import { gql } from "@apollo/client";
 export const QUERY_USER = gql`
   {
     user {
-      _ID
+      _id
       userName
+      views {
+        viewText
+      }
     }
   }
 `;
 export const QUERY_VIEW = gql`
   {
     view {
-      _ID
+      _id
       viewText
     }
   }
@@ -20,7 +23,7 @@ export const QUERY_VIEW = gql`
 export const QUERY_WAVES = gql`
   {
     waves {
-      _ID
+      _id
       waveBody
     }
   }

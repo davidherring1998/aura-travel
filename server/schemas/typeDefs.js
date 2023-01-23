@@ -3,7 +3,7 @@ const typeDefs = gql`
   type User {
     _id: ID
     userName: String
-    
+    views: [View]
   }
 
   type View {

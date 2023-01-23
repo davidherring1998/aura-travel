@@ -1,98 +1,109 @@
-import { React, useState, useRef } from "react";
-import '../../../styles/Maps.css'
-import { IoIosNavigate } from 'react-icons/io'
-import { MdCancel } from 'react-icons/md'
-import { Box, IconButton } from '@chakra-ui/react'
-import { useJsApiLoader, GoogleMap, Marker, Autocomplete, DirectionsRenderer } from '@react-google-maps/api'
+import { React, useState, useRef } from 'react';
+import '../../../styles/Maps.css';
+import { IoIosNavigate } from 'react-icons/io';
+import { Box } from '@chakra-ui/react'
+import { MdCancel } from 'react-icons/md';
+import { LoadScript, GoogleMap, Marker, Autocomplete, DirectionsRenderer } from '@react-google-maps/api';
 
-function Navigation() {
+// get's default location set to nashville
+const center = { lat: 36.166340, lng: -86.779068 };
 
-    const center = { lat: 36.166340, lng: -86.779068}
+function Maps() {
 
-    const [map, setMap] = useState(null)
-    const [directionResponse, setDirectionResponse] = useState(null);
-    const [duration, setDuration] = useState('');
-    const [distance, setDistance] = useState('');
+  const [map, setMap] = useState(null)
+  const [directionResponse, setDirectionResponse] = useState(null);
+  const [duration, setDuration] = useState('');
+  const [distance, setDistance] = useState('');
 
-    /** @type React.MutableRefObject<HTMLInputElement> */
-    const originRef = useRef();
-    /** @type React.MutableRefObject<HTMLInputElement> */
-    const destinationRef = useRef();
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const originRef = useRef();
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const destinationRef = useRef();
 
-    const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,
-        libraries: ['places'],
+  async function calculateRoute() {
+    if (originRef.current.value === '' || destinationRef.current.value === '') {
+      return
+    }
+    // eslint-disable-next-line no-undef
+    const directionService = new google.maps.DirectionsService()
+    const results = await directionService.route({
+      origin: originRef.current.value,
+      destination: destinationRef.current.value,
+      // eslint-disable-next-line no-undef
+      travelMode: google.maps.TravelMode.DRIVING
     })
-
-    if (!isLoaded) {
-        return <div className="mapContainer">Loading...</div>
-    }
-
-    async function calculateRoute() {
-        if (originRef.current.value === '' || destinationRef.current.value === '') {
-            return
-        } 
-        // eslint-disable-next-line no-undef
-        const directionService  = new google.maps.DirectionsService()
-        const results = await directionService.route({
-            origin: originRef.current.value,
-            destination: destinationRef.current.value,
-            // eslint-disable-next-line no-undef
-            travelMode: google.maps.TravelMode.DRIVING
-        })
-            setDirectionResponse(results)
-            setDistance(results.routes[0].legs[0].distance.text)
-            setDuration(results.routes[0].legs[0].duration.text)
-    }
+    setDirectionResponse(results)
+    setDistance(results.routes[0].legs[0].distance.text)
+    setDuration(results.routes[0].legs[0].duration.text)
+  }
 
 
-    function clearRoute() {
-        setDirectionResponse(null)
-        setDistance('')
-        setDuration('')
-        originRef.current.value = ''
-        destinationRef.current.value = ''
-    }
+  function clearRoute() {
+    setDirectionResponse(null)
+    setDistance('')
+    setDuration('')
+    originRef.current.value = ''
+    destinationRef.current.value = ''
+  }
 
+  // input box component
+  function RenderInput() {
     return (
-        <div>
-            <Box position='absolute' left={0} top={0} h='100%' w='100%' zIndex='modal'>
-                <GoogleMap center={center} zoom={10} mapContainerStyle={{ width: '100%', height: '100%' }}>
-                    <Marker position={center} />
-                    onLoad={map => setMap(map)}
-                    {directionResponse && <DirectionsRenderer directions={directionResponse}/>}
-                </GoogleMap>
-            </Box>
-            <div className="mapContainer">
-                <div className="mapForm">
+      <div className="mapInputContainer">
+        <div className="mapForm">
 
-                    <Autocomplete>
-                    <input type="text" placeholder="Origin" id="origin" ref={originRef}/>
-                    </Autocomplete>
+          <Autocomplete>
+            <input type="text" placeholder="Origin" id="origin" className='input' ref={originRef} />
+          </Autocomplete>
+          <Autocomplete>
+            <input type="text" placeholder="Destination" id="destination" className='input' ref={destinationRef} />
+          </Autocomplete>
+          <button type="submit" onClick={calculateRoute} className="btn">Calculate</button>
 
-                    <Autocomplete>
-                    <input type="text" placeholder="Destination" id="destination" ref={destinationRef} />
-                    </Autocomplete>
-
-                    <button type="submit" onClick={calculateRoute}>Calculate Route</button>
-
-                    <span className="iconMap" onClick={setMap}>
-                        <IoIosNavigate />
-                    </span>
-
-                    <span className="iconExit" onClick={clearRoute}>
-                        <MdCancel/>
-                    </span>
-                </div>
-                <div className="mapResults">
-                    <p>Distance: {distance} </p>
-                    <p>Duration: {duration} </p>
-                </div>
-            </div>
         </div>
+        <div className="mapResults">
+          <span className="iconMap" onClick={setMap}>
+            <IoIosNavigate />
+          </span>
+          <span className="iconExit" onClick={clearRoute}>
+            <MdCancel />
+          </span>
+        </div>
+
+        <div className='resultDiv'>
+          <p className='result'>Distance: <strong>{distance}</strong></p>
+          <p className='result'>Duration: <strong>{duration}</strong> </p>
+        </div>
+
+      </div>
     )
+  }
+
+  // google component
+  function Google() {
+    return (
+      <div className='container'>
+        <LoadScript googleMapsApiKey="AIzaSyD6GxVYV5Dxc6NS3TMAbOtu2S-7sQKGorI" libraries={['places']}>
+          <div className='mapDiv' left={0} top={0} h='100%' w='100%' zindex='modal'>
+            <GoogleMap center={center} zoom={10} mapContainerStyle={{ width: '100%', height: '100%' }}>
+              <Marker position={center} />
+              onLoad={map => setMap(map)}
+              {directionResponse && <DirectionsRenderer directions={directionResponse} />}
+            </GoogleMap>
+            < RenderInput />
+          </div>
+        </LoadScript>
+      </div>
+    )
+  }
+
+
+  return (
+    <div>
+      <Google />
+    </div>
+  )
 }
 
-// add onclick to x icon to clearRoute
 
-export default Navigation;
+export default Maps;

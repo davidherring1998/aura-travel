@@ -2,21 +2,28 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { fromPromise, useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-// import {ADD_USER} from '../utils/mutations'
+import "../styles/Login.css";
+import { ADD_USER } from "../utils/mutations";
 
 function SignUp(props) {
-  const [formState, setFormState] = useState({ userName: "", password: "" });
-  // const [addUser] = useMutation(ADD_USER);
+  const [formState, setFormState] = useState({
+    userName: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const mutationResponse = await AudioScheduledSourceNode({
       variables: {
-        email: formState,
         userName: formState.userName,
-        password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        email: formState.email,
+        password: formState.password,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -31,13 +38,18 @@ function SignUp(props) {
     });
   };
   return (
-    <div>
-      <Link to="/signup">Click here to sign up!</Link>
+    <div className="loginFormBox">
+      <Link className="signupBTN" to="/signup">
+        Click here to sign up!
+      </Link>
       <h1>SignUp</h1>
       <form onSubmit={{ handleFormSubmit }}>
         <div>
-          <label htmlFor="userName">Username:</label>
+          <label className="loginLabel" htmlFor="userName">
+            Username:
+          </label>
           <input
+            className="loginStyle"
             placeholder="username.."
             name="userName"
             type="userName"
@@ -46,9 +58,12 @@ function SignUp(props) {
           />
         </div>
         <div>
-          <label htmlFor="firstName">First Name:</label>
+          <label className="loginLabel" htmlFor="firstName">
+            First Name:
+          </label>
           <input
-            placeholder="First"
+            className="loginStyle"
+            placeholder="First Name"
             name="firstName"
             type="firstName"
             id="firstName"
@@ -56,9 +71,12 @@ function SignUp(props) {
           />
         </div>
         <div>
-          <label htmlFor="lastName">Last Name:</label>
+          <label className="loginLabel" htmlFor="lastName">
+            Last Name:
+          </label>
           <input
-            placeholder="Last"
+            className="loginStyle"
+            placeholder="Last Name"
             name="lastName"
             type="lastName"
             id="lastName"
@@ -66,8 +84,11 @@ function SignUp(props) {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label className="loginLabel" htmlFor="email">
+            Email:
+          </label>
           <input
+            className="loginStyle"
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -76,8 +97,11 @@ function SignUp(props) {
           />
         </div>
         <div>
-          <label htmlFor="pwd">Password:</label>
+          <label className="loginLabel" htmlFor="pwd">
+            Password:
+          </label>
           <input
+            className="loginStyle"
             placeholder="********"
             name="password"
             type="password"
@@ -86,9 +110,13 @@ function SignUp(props) {
           />
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button className="loginSubmit" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </div>
   );
 }
+
+export default SignUp;

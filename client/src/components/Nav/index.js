@@ -1,7 +1,8 @@
 import React from "react";
-import "../../styles/Nav.css";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import { BsGithub } from 'react-icons/bs';
+import "../../styles/Nav.css";
 
 function Nav() {
   return (
@@ -26,14 +27,14 @@ function Nav() {
         </ul>
       </nav>
       <footer>
-        <div className="iconBox">
-          <a
-            href="https://github.com/jswearingen18"
-            className="fa fa-github icons"
-          >
-            Github
-          </a>
+        {/* <p> &copy; Made with love...&hearts;</p> */}
+        <div className="icon">
+        <a href="https://github.com/jswearingen18" target='blank' className="icon"> <BsGithub /> </a>
+        <a href="https://github.com/shelbybridwell" target='blank' className="icon"> <BsGithub /> </a>
+        <a href="https://github.com/davidherring1998" target='blank' className="icon"> <BsGithub /> </a>
+        <a href="https://github.com/baelindsay" target='blank' className="icon"> <BsGithub /> </a>
         </div>
+        <p> &copy; Made with love...&hearts;</p>
       </footer>
     </>
   );

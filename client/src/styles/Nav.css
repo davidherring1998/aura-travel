@@ -78,17 +78,30 @@ ul {
 }
 
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
     width: 100%;
     background-color: rgb(58, 57, 57);
-    margin-bottom: 0px;
     text-align: center;
     color: greenyellow;
-    height: 50px;
+    height: 5px;
     padding: 30px;
+}
+
+footer p {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.icon{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-bottom: 5%; */
+    margin-top: -15px;
+    font-size: 1rem;
 }
 
 nav .buttonNav {

@@ -44,7 +44,7 @@ const typeDefs = gql`
       password: String
     ): User
     updateView(_id: ID!): View
-    login(email: String!, password: String!): Auth
+    login(userName: String!, password: String!): Auth
   }
 `;
 module.exports = typeDefs;

@@ -30,6 +30,7 @@ body {
     background: rgb(52, 51, 51);
     height: 150px;
     border-radius: 12px;
+    margin-bottom: 50px;
 }
 
 .viewStyle {
@@ -68,6 +69,7 @@ body {
     background-color: #0D5D56;;
     border: solid 2px black;
     border-radius: 12px;
+    margin-bottom: 100px;
 }
 
 .viewPost {

@@ -1,9 +1,12 @@
 .container{
-    width: 90%;
-    /* background-color: red; */
-    margin-left: 5%;
+    width: 61.5%;
+    background-color: #0D5D56;;
+    margin-left: 15%;
     padding-top: 1px;
     height: 550px;
+    border: solid 2px black;
+    border-radius: 12px;
+
 }
 
 .mapContainer {
@@ -13,11 +16,10 @@
     padding: 35px;
     display: flex;
     flex-direction: row;
-    display: block;
     position: relative;
     align-items: center;
     height: 800px;
-    width: 50%;
+    width: 50%
 }
 
 .mapDiv{
@@ -30,33 +32,38 @@
 }
 
 .mapInputContainer{
-    background-color: lightblue;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    font-size: 1.2vw;
     margin-top: 20px;
     padding: 10px;
     border: 2px solid black;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    
 }
 
 .input {
     margin-bottom: 5px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 1px;
     margin-right: 5px;
+}
+
+.output{
+    color:greenyellow;
 }
 
 .btn {
     margin-bottom: 5px;
+    margin-left: 20%;
     border: 1px solid black;
-    border-radius: 5px;
+    font-size: 1.2vw;
+    border-radius: 12px;
+    width: 55%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
 }
-
-.btn:hover{
-    background-color: red;
-}
-
 
 
 

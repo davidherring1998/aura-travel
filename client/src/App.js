@@ -42,6 +42,7 @@ export default function App() {
       <Router>
         <div>
           <Nav />
+          <Maps />
           {/* <Calculator />
           <AuraCalendar /> */}
 

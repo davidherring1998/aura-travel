@@ -40,6 +40,7 @@ export const ADD_VIEW = gql`
       token
       view {
         _id
+        viewText
       }
     }
   }

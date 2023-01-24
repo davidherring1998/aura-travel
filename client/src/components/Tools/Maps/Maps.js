@@ -1,7 +1,7 @@
 import { React, useState, useRef } from 'react';
 import '../../../styles/Maps.css';
 import { IoIosNavigate } from 'react-icons/io';
-import { Box } from '@chakra-ui/react'
+// import { Box } from '@chakra-ui/react'
 import { MdCancel } from 'react-icons/md';
 import { LoadScript, GoogleMap, Marker, Autocomplete, DirectionsRenderer } from '@react-google-maps/api';
 

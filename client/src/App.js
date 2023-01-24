@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -17,6 +17,7 @@ import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
 import Profile from "../src/pages/Profile";
 import Calculator from "./components/Tools/Calculator/Calculator";
+import WeatherCard from "./components/Tools/Weather/Weather";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -36,7 +37,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+export default function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -44,6 +45,7 @@ function App() {
           <Nav />
           <Calculator />
           <AuraCalendar />
+          <WeatherCard />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
@@ -58,4 +60,3 @@ function App() {
   );
 }
 
-export default App;

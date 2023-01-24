@@ -52,10 +52,10 @@ function Maps() {
       <div className="mapInputContainer">
         <div className="mapForm">
           <Autocomplete>
-            <input type="text" placeholder="Origin" id="origin" className='input' ref={originRef} />
+            <input type="text" placeholder="Enter Origin..." id="origin" className='input' ref={originRef} />
           </Autocomplete>
           <Autocomplete>
-            <input type="text" placeholder="Destination" id="destination" className='input' ref={destinationRef} />
+            <input type="text" placeholder=" Enter Destination..." id="destination" className='input' ref={destinationRef} />
           </Autocomplete>
           <button type="submit" onClick={calculateRoute} className="btn">Calculate</button>
 

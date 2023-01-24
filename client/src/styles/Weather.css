@@ -1,15 +1,17 @@
-.main{
-    width: 61.5%;
+.main {
+    width: 80%;
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 30px;
     height: 25%;
-    background-color: #0D5D56;;
+    background-color: #0D5D56;
+    ;
     border: solid 2px black;
     border-radius: 12px;
-    color:white;
+    color: white;
 }
-.header{
+
+.header {
     width: 100%;
     color: greenyellow;
     font-size: 22px;
@@ -21,7 +23,7 @@
     text-align: center;
 }
 
-.description{
+.description {
     padding: 5%;
     width: 100%;
     color: greenyellow;
@@ -32,7 +34,7 @@
     text-align: center;
 }
 
-.temp{
+.temp {
     padding: 8px;
     color: white;
     font-size: 14px;
@@ -40,16 +42,18 @@
     text-align: center;
 }
 
-.flex{
-   flex: flex-wrap;
-   display: flex;
-   justify-content: space-evenly;
+.flex {
+    flex: flex-wrap;
+    display: flex;
+    justify-content: space-evenly;
 }
-.data{
+
+.data {
     color: greenyellow;
     font-weight: bold;
 }
-.sunrise-sunset{
+
+.sunrise-sunset {
     padding: 8px;
     color: white;
     font-size: 14px;
@@ -57,14 +61,14 @@
     text-align: center;
 }
 
-.input{
+.input {
     padding: 5px;
     border: 0;
     border-radius: 20px;
     text-align: center;
 }
 
-.inputBtn{
+.inputBtn {
     height: 20px;
     width: 15%;
     color: greenyellow;

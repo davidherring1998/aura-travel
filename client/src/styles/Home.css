@@ -55,13 +55,13 @@ body {
 }
 
 .viewSubmit {
-    border: solid 2px black;
+    margin-left: 150px;
+    height: 20px;
+    width: 15%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
     border-radius: 12px;
-    margin-left: 800px;
-    width: 80px;
-    height: 25px;
-    color: aliceblue;
-    background-color: black;
+    margin-top: 3px;
 }
 .viewContainer {
     margin-bottom: 50px;

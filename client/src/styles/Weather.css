@@ -1,5 +1,5 @@
 .main {
-    width: 80%;
+    width: 79%;
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 30px;
@@ -9,6 +9,7 @@
     border: solid 2px black;
     border-radius: 12px;
     color: white;
+    margin-bottom: 100px;
 }
 
 .header {

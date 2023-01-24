@@ -4,13 +4,15 @@ import "../../styles/Tools.css";
 
 import Calculator from "../../components/Tools/Calculator/Calculator";
 import Calender from "../../components/Tools/Calendar/Calendar";
+import Maps from "../../components/Tools/Maps/Maps";
+import WeatherCard from "../../components/Tools/Weather/Weather";
 
 
 function Tools(handlePageChange) {
   return (
     <section className="mainContainer">
       <div className="toolContainer">
-          <div className="weather">
+          {/* <div className="weather">
             <div className="widgetContainer">
               <span onClick={() => handlePageChange("Weather")}>Weather</span>
             </div>
@@ -29,9 +31,11 @@ function Tools(handlePageChange) {
             <div className="widgetContainer">
               <span>Calender</span>
             </div>
-          </div>
+          </div> */}
         <Calculator /> 
         <Calender />
+        <Maps />
+        <WeatherCard />
       </div>
     </section>
   );

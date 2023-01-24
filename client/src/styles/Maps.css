@@ -1,12 +1,14 @@
 .container{
-    width: 61.5%;
+    width: 79%;
     background-color: #0D5D56;;
-    margin-left: 15%;
+    margin-left: 150px;
+    margin-right: 150px;
     padding-top: 2%;
     padding-bottom: 2%;
     height: 550px;
     border: solid 2px black;
     border-radius: 12px;
+    margin-bottom: 80px;
 
 }
 
@@ -20,7 +22,8 @@
     position: relative;
     align-items: center;
     height: 800px;
-    width: 50%
+    width: 50%;
+    position: fixed;
 }
 
 .mapDiv{

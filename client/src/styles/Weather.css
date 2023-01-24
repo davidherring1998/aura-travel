@@ -1,60 +1,74 @@
 .main{
-    width: 700px;
-    border-radius: 20px;
-    background-color: #01579b;
+    width: 61.5%;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    height: 25%;
+    background-color: #0D5D56;;
+    border: solid 2px black;
+    border-radius: 12px;
+    color:white;
 }
-
-.top{
-    height: 60px;
-    background-color: #424242;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
-    display: flex;
-    justify-content: space-between;
-}
-
 .header{
-    background-color: #424242;
-    color: whitesmoke;
-    margin: 10px 0px 0px 10px;
-    font-size: 25px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
-}
-
-.day{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.temp{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 18px;
-}
-
-.flex{
-    display: flex;
-    justify-content: space-between;
-}
-
-.sunrise-sunset{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 16px;
+    width: 100%;
+    color: greenyellow;
+    font-size: 22px;
+    margin: 0;
+    padding: -1px;
+    background-color: rgb(31, 30, 30);
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-align: center;
 }
 
 .description{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    padding: 5%;
+    width: 100%;
+    color: greenyellow;
+    font-size: 14px;
+    margin: 0px;
+    background-color: rgb(31, 30, 30);
+    font-weight: bold;
+    text-align: center;
+}
+
+.temp{
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    margin: 2px;
+    text-align: center;
+}
+
+.flex{
+   flex: flex-wrap;
+   display: flex;
+   justify-content: space-evenly;
+}
+.data{
+    color: greenyellow;
+    font-weight: bold;
+}
+.sunrise-sunset{
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    margin: 2px;
+    text-align: center;
+}
+
+.input{
+    padding: 5px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.inputBtn{
+    height: 20px;
+    width: 15%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
+    border-radius: 12px;
+    margin-top: 3px;
 }

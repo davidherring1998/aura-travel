@@ -13,7 +13,7 @@ function SignUp(props) {
     email: "",
     password: "",
   });
-  const [addUser] = useMutation(ADD_USER);
+  const [addUser]= useMutation(ADD_USER);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +44,8 @@ function SignUp(props) {
         Click here to sign up!
       </Link>
       <h1>SignUp</h1>
-      <form onSubmit={handleFormSubmit}>
+
+      <form onSubmit={ handleFormSubmit }>
         <div>
           <label className="loginLabel" htmlFor="userName">
             Username:

@@ -16,7 +16,6 @@ import Maps from "./components/Tools/Maps/Maps";
 import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
 import Profile from "../src/pages/Profile";
-import Calculator from "./components/Tools/Calculator/Calculator";
 import WeatherCard from "./components/Tools/Weather/Weather";
 
 const httpLink = createHttpLink({
@@ -45,6 +44,7 @@ export default function App() {
           <Nav />
           {/* <Calculator />
           <AuraCalendar /> */}
+
           <WeatherCard />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -57,6 +57,7 @@ export default function App() {
         </div>
       </Router>
     </ApolloProvider>
+
   );
 }
 

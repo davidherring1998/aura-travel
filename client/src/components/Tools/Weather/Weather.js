@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../../styles/Weather.css';
-// import moment from 'moment';
+import moment from 'moment';
 
 export default function WeatherCard(){
   const [city, setCity] = useState("");
@@ -12,7 +12,7 @@ export default function WeatherCard(){
     //     setLong(position.coords.longitude);
     //   });
 
-     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=metric&APPID=225569ec657be8e17ac296ced3863d8d`)
+     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=imperial&APPID=225569ec657be8e17ac296ced3863d8d`)
       .then(res => res.json())
       .then(result => {
         setData(result)
@@ -30,18 +30,44 @@ export default function WeatherCard(){
     // }
     // )
   }
+ 
   return (
-    <div>
+    <div className="weatherContainer">
+    {/* {(typeof data.main != 'undefined') ? (
+      <WeatherCard data={data}/> ): ( */}
+   <div> <div className="main">
+    <div className="header">Weather</div>
+    <div className="input">
+    Enter City Name:
       <form><input
       type="text"
       name="city"
       id="city"
       placeholder="city"
       onChange={handleInput}
-      /><button type="Submit">Submit</button>
+      /><button type="Submit" className="inputBtn">Submit</button>
       </form>
+      </div>
+        <div className="flex">
+        <p className="description">The currrent weather is {data.weather[0].main} in {data.name} on {moment().format('dddd')}, <span>{moment().format('LL')}</span>.</p>
+        
+      </div>
+      <div className="flex">
+         <p className="temp">Temprature: <p className="data">{data.main.temp}&deg;F</p></p>
+         <p className="temp">Humidity: <p className="data">{data.main.humidity} %</p></p>
+         <p className="temp">Wind Speed: <p className="data">{data.wind.speed} mph</p></p>
+     </div>
+     <div className="flex">
+         <p className="sunrise-sunset">Sunrise: <p className="data">{new Date(data.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p></p>
+         <p className="sunrise-sunset">Sunset: <p className="data">{new Date(data.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p></p>
+     </div>   
+     </div></div>
+      {/* )} */}
     </div>
-    // <div className="Weather Box">
+     
+     
+   
+    // <div className="weatherContainter">
     //   {(typeof data.main != 'undefined') ? (
     //     <WeatherCard data={data}/>
     //   ): (

@@ -4,18 +4,21 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@apollo/client": "^3.3.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "react-router-dom": "^6.2.1",
-    "@apollo/client": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "graphql": "16.3.0",
     "jwt-decode": "^2.2.0",
-    "font-awesome": "^4.7.0"
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.1",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

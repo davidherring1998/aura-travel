@@ -3,54 +3,67 @@
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 30px;
-    height: 300px;
-    background-color: rgb(150, 147, 147);
-    border: solid 3px black;
+    height: 25%;
+    background-color: #0D5D56;;
+    border: solid 2px black;
     border-radius: 12px;
+    color:white;
 }
-
 .header{
-    color: black;
-    margin: 10px 0px 0px 10px;
-    font-size: 16px;
-    border-radius: 20px 20px 0 0;
-}
-
-/* .day{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-} */
-
-.temp{
-    padding: 15px;
-    color: black;
-    font-size: 16px;
-}
-
-.flex{
-    display: flex;
-    justify-content:space-around;
-}
-
-.sunrise-sunset{
-    padding: 15px;
-    color: black;
-    font-size: 16px;
+    width: 100%;
+    color: greenyellow;
+    font-size: 22px;
+    margin: 0;
+    padding: -1px;
+    background-color: rgb(31, 30, 30);
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-align: center;
 }
 
 .description{
-    padding: 15px;
-    color: black;
-    font-size: 24px;
+    padding: 5%;
+    width: 100%;
+    color: greenyellow;
+    font-size: 14px;
+    margin: 0px;
+    background-color: rgb(31, 30, 30);
+    font-weight: bold;
+    text-align: center;
 }
-.input{
 
-    padding: 15px;
-    border: 0;
+.temp{
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    margin: 2px;
+    text-align: center;
 }
+
+.flex{
+   flex: flex-wrap;
+   display: flex;
+   justify-content: space-evenly;
+}
+.data{
+    color: greenyellow;
+    font-weight: bold;
+}
+.sunrise-sunset{
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    margin: 2px;
+    text-align: center;
+}
+
+.input{
+    padding: 5px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
 .inputBtn{
     height: 20px;
     width: 15%;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../../styles/Weather.css';
-// import moment from 'moment';
+import moment from 'moment';
 
 export default function WeatherCard(){
   const [city, setCity] = useState("");
@@ -36,7 +36,7 @@ export default function WeatherCard(){
     {/* {(typeof data.main != 'undefined') ? (
       <WeatherCard data={data}/> ): ( */}
    <div> <div className="main">
-    
+    <div className="header">Weather</div>
     <div className="input">
     Enter City Name:
       <form><input
@@ -48,20 +48,18 @@ export default function WeatherCard(){
       /><button type="Submit" className="inputBtn">Submit</button>
       </form>
       </div>
-        {/* <p className="header">{data.name}</p> */}
         <div className="flex">
-          <p className="description"> </p>
-
+        <p className="description">The currrent weather is {data.weather[0].main} in {data.name} on {moment().format('dddd')}, <span>{moment().format('LL')}</span>.</p>
         
       </div>
       <div className="flex">
-         {/* <p className="temp">Temprature: {data.main.temp}&deg;F</p>
-         <p className="temp">Humidity: {data.main.temp} %</p>
-         <p className="temp">Wind Speed: {data.wind.speed} mph</p> */}
+         <p className="temp">Temprature: <p className="data">{data.main.temp}&deg;F</p></p>
+         <p className="temp">Humidity: <p className="data">{data.main.humidity} %</p></p>
+         <p className="temp">Wind Speed: <p className="data">{data.wind.speed} mph</p></p>
      </div>
      <div className="flex">
-         {/* <p className="sunrise-sunset">Sunrise: {data.sys.sunrise} AM</p>
-         <p className="sunrise-sunset">Sunset: {data.sys.sunrise} PM</p> */}
+         <p className="sunrise-sunset">Sunrise: <p className="data">{new Date(data.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p></p>
+         <p className="sunrise-sunset">Sunset: <p className="data">{new Date(data.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p></p>
      </div>   
      </div></div>
       {/* )} */}

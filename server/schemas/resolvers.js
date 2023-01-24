@@ -24,8 +24,8 @@ const resolvers = {
     },
     addView: async (parent, args) => {
       const view = await View.create(args);
-      const token = signToken(view);
-      return { token, view };
+      const updateUser = await User.findByIdAndUpdate({ _id: context.user._id }, { $push: { views: view._id } }, { new: true })
+      return { updateUser };
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {

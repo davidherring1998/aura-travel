@@ -6,7 +6,7 @@ import Auth from "../utils/auth";
 import "../styles/Login.css";
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ userName: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (e) => {
@@ -26,10 +26,10 @@ function Login(props) {
   };
 
   const handleChange = (e) => {
-    const { userName, value } = e.target;
+    const { name, value } = e.target;
     setFormState({
       ...formState,
-      [userName]: value,
+      [name]: value,
     });
   };
 
@@ -40,7 +40,7 @@ function Login(props) {
       </Link>
       <h1 className="loginHeader">Login</h1>
       <div className="loginFormBox">
-        <form onSubmit={{ handleFormSubmit }}>
+        <form onSubmit={handleFormSubmit}>
           <label className="loginLabel" htmlFor="userName">
             Username:
           </label>

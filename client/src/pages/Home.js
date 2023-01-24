@@ -9,12 +9,13 @@ function Home(props) {
   const [formState, setFormState] = useState({ viewText: "" });
   const [newView] = useMutation(ADD_VIEW);
 
-  const handleViewForm = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
       const mutationResponse = await newView({
         variables: { viewText: formState.viewText },
       });
+      console.log(mutationResponse);
       const token = mutationResponse.data.newView.token;
       Auth.login(token);
     } catch (error) {
@@ -22,11 +23,11 @@ function Home(props) {
     }
   };
 
-  const handleViewText = (e) => {
-    const { viewText, value } = e.target;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormState({
       ...formState,
-      [viewText]: value,
+      [name]: value,
     });
   };
 
@@ -46,9 +47,9 @@ function Home(props) {
   }
 
   return (
-    <body>
+    <body className="viewPost">
       <div className="viewFormBox">
-        <form className="viewsText" onSubmit={handleViewForm}>
+        <form className="viewsText" onSubmit={handleFormSubmit}>
           <div>
             <label htmlFor="viewText"></label>
             <input
@@ -57,7 +58,7 @@ function Home(props) {
               name="viewText"
               type="viewText"
               id="viewText"
-              onChange={handleViewText}
+              onChange={handleChange}
             />
           </div>
           <button className="viewSubmit" type="submit">
@@ -65,7 +66,7 @@ function Home(props) {
           </button>
         </form>
       </div>
-      <div>
+      <div className="viewContainer">
         {dataUser?.user?.map((user, index) => {
           return (
             <div className="singleViews" key={index}>
@@ -73,7 +74,11 @@ function Home(props) {
                 <h4 className="userHeader">-{user.userName}</h4>
               </div>
               {user.views.map((view, i) => {
-                return <p key={i}>{view.viewText}</p>;
+                return (
+                  <p className="allViews" key={i}>
+                    {view.viewText}
+                  </p>
+                );
               })}
             </div>
           );

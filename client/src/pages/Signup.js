@@ -26,6 +26,7 @@ function SignUp(props) {
         password: formState.password,
       },
     });
+    console.log(mutationResponse);
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
@@ -43,6 +44,7 @@ function SignUp(props) {
         Click here to sign up!
       </Link>
       <h1>SignUp</h1>
+
       <form onSubmit={ handleFormSubmit }>
         <div>
           <label className="loginLabel" htmlFor="userName">

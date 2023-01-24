@@ -20,11 +20,12 @@ const resolvers = {
       const token = signToken(user);
 
       // return {  user };
-      return {token, user}
+      return { token, user };
     },
-    addView: async (parent, { wave }, context) => {
-      console.log(context);
-      throw new AuthenticationError("User is not logged in!");
+    addView: async (parent, args) => {
+      const view = await View.create(args);
+      const token = signToken(view);
+      return { token, view };
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
@@ -38,8 +39,8 @@ const resolvers = {
     updateView: async (parent, { _id }) => {
       return await View.findByIdAndUpdate(_id, { new: true });
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    login: async (parent, { userName, password }) => {
+      const user = await User.findOne({ userName });
 
       if (!user) {
         throw new AuthenticationError("Incorrect password or user name!");

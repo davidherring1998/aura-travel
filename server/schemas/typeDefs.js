@@ -35,7 +35,7 @@ const typeDefs = gql`
       email: String!
       password: String!
     ): Auth
-    addView(viewText: String!): View
+    addView(viewText: String!): Auth
     updateUser(
       userName: String
       firstName: String

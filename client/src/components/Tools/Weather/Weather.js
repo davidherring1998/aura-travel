@@ -12,7 +12,7 @@ export default function WeatherCard(){
     //     setLong(position.coords.longitude);
     //   });
 
-     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=metric&APPID=225569ec657be8e17ac296ced3863d8d`)
+     fetch(`https://api.openweathermap.org/data/2.5/weather/?q=${city}&units=imperial&APPID=225569ec657be8e17ac296ced3863d8d`)
       .then(res => res.json())
       .then(result => {
         setData(result)
@@ -30,18 +30,46 @@ export default function WeatherCard(){
     // }
     // )
   }
+ 
   return (
-    <div>
+    <div className="weatherContainer">
+    {/* {(typeof data.main != 'undefined') ? (
+      <WeatherCard data={data}/> ): ( */}
+   <div> <div className="main">
+    
+    <div className="input">
+    Enter City Name:
       <form><input
       type="text"
       name="city"
       id="city"
       placeholder="city"
       onChange={handleInput}
-      /><button type="Submit">Submit</button>
+      /><button type="Submit" className="inputBtn">Submit</button>
       </form>
+      </div>
+        {/* <p className="header">{data.name}</p> */}
+        <div className="flex">
+          <p className="description"> </p>
+
+        
+      </div>
+      <div className="flex">
+         {/* <p className="temp">Temprature: {data.main.temp}&deg;F</p>
+         <p className="temp">Humidity: {data.main.temp} %</p>
+         <p className="temp">Wind Speed: {data.wind.speed} mph</p> */}
+     </div>
+     <div className="flex">
+         {/* <p className="sunrise-sunset">Sunrise: {data.sys.sunrise} AM</p>
+         <p className="sunrise-sunset">Sunset: {data.sys.sunrise} PM</p> */}
+     </div>   
+     </div></div>
+      {/* )} */}
     </div>
-    // <div className="Weather Box">
+     
+     
+   
+    // <div className="weatherContainter">
     //   {(typeof data.main != 'undefined') ? (
     //     <WeatherCard data={data}/>
     //   ): (

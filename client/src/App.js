@@ -8,6 +8,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
+import Calculator from "./components/Tools/Calculator/Calculator";
 import AuraCalendar from "./components/Tools/Calendar/Calendar";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
@@ -42,11 +43,6 @@ export default function App() {
       <Router>
         <div>
           <Nav />
-          {/* <Maps /> */}
-          {/* <Calculator />
-          <AuraCalendar /> */}
-
-          {/* <WeatherCard /> */}
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
             <Route path="/signup" element={<Signup />} />

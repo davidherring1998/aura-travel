@@ -2,7 +2,8 @@
     width: 61.5%;
     background-color: #0D5D56;;
     margin-left: 15%;
-    padding-top: 1px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     height: 550px;
     border: solid 2px black;
     border-radius: 12px;
@@ -36,6 +37,7 @@
     color: white;
     font-size: 1.2vw;
     margin-top: 20px;
+    margin-bottom: 5%;
     padding: 10px;
     border: 2px solid black;
     border-radius: 20px;
@@ -43,32 +45,52 @@
     flex-direction: row;
 }
 
+#origin{
+    width: 80%;
+}
+
+#destination{
+    width: 80%;
+}
+
 .input {
     margin-bottom: 5px;
     border: 1px solid black;
     border-radius: 1px;
-    margin-right: 5px;
+}
+
+::placeholder {
+    color: gray;
+    font-size: 1vw;
 }
 
 .output{
     color:greenyellow;
 }
 
+.iconMap {
+    margin-right: 80%;
+}
+
 .btn {
     margin-bottom: 5px;
-    margin-left: 20%;
+    margin-left: 0%;
+    margin-top: 5%;
     border: 1px solid black;
     font-size: 1.2vw;
     border-radius: 12px;
-    width: 55%;
+    width: 85%;
     color: greenyellow;
     background-color: rgb(51, 48, 48);
 }
 
-
+.btn:hover{
+    background-color: greenyellow;
+    color: rgb(51, 48, 48);
+}
 
 .resultDiv {
-    margin-left: 20%;
+    margin-left: 2%;
     padding: 10px;
 }
 

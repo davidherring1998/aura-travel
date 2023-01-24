@@ -51,7 +51,6 @@ function Maps() {
     return (
       <div className="mapInputContainer">
         <div className="mapForm">
-
           <Autocomplete>
             <input type="text" placeholder="Origin" id="origin" className='input' ref={originRef} />
           </Autocomplete>
@@ -71,8 +70,8 @@ function Maps() {
         </div>
 
         <div className='resultDiv'>
-          <p className='result'>Distance: <strong>{distance}</strong></p>
-          <p className='result'>Duration: <strong>{duration}</strong> </p>
+          <p className='result'>Distance: <strong className='output'>{distance}</strong></p>
+          <p className='result'>Duration: <strong className='output'>{duration}</strong> </p>
         </div>
 
       </div>

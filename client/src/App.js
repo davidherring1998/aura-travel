@@ -8,7 +8,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
-import AuraCalendar from "./components/Tools/Calendar/Calendar";
+// import AuraCalendar from "./components/Tools/Calendar/Calendar";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Tools from "./pages/AuraTools/AuraTools";
@@ -16,8 +16,7 @@ import Maps from "./components/Tools/Maps/Maps";
 import Signup from "../src/pages/Signup";
 import Login from "../src/pages/Login";
 import Profile from "../src/pages/Profile";
-import Calculator from "./components/Tools/Calculator/Calculator";
-import WeatherCard from "./components/Tools/Weather/Weather";
+// import WeatherCard from "./components/Tools/Weather/Weather";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -43,9 +42,8 @@ export default function App() {
       <Router>
         <div>
           <Nav />
-          <Calculator />
-          <AuraCalendar />
-          <WeatherCard />
+          {/* <AuraCalendar /> */}
+          {/* <WeatherCard /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
@@ -57,6 +55,7 @@ export default function App() {
         </div>
       </Router>
     </ApolloProvider>
+
   );
 }
 

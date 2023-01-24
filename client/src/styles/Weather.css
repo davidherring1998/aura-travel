@@ -1,60 +1,61 @@
 .main{
-    width: 700px;
-    border-radius: 20px;
-    background-color: #01579b;
-}
-
-.top{
-    height: 60px;
-    background-color: #424242;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
-    display: flex;
-    justify-content: space-between;
+    width: 61.5%;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    height: 300px;
+    background-color: rgb(150, 147, 147);
+    border: solid 3px black;
+    border-radius: 12px;
 }
 
 .header{
-    background-color: #424242;
-    color: whitesmoke;
+    color: black;
     margin: 10px 0px 0px 10px;
-    font-size: 25px;
+    font-size: 16px;
     border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
 }
 
-.day{
+/* .day{
     padding: 15px;
     color: whitesmoke;
     font-family: 'Recursive', sans-serif;
     font-size: 24px;
     font-weight: 600;
-}
+} */
 
 .temp{
     padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 18px;
+    color: black;
+    font-size: 16px;
 }
 
 .flex{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
 }
 
 .sunrise-sunset{
     padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    color: black;
     font-size: 16px;
 }
 
 .description{
     padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    color: black;
     font-size: 24px;
-    font-weight: 600;
+}
+.input{
+
+    padding: 15px;
+    border: 0;
+}
+.inputBtn{
+    height: 20px;
+    width: 15%;
+    color: greenyellow;
+    background-color: rgb(51, 48, 48);
+    border-radius: 12px;
+    margin-top: 3px;
 }

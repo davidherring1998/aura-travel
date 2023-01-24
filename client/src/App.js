@@ -43,8 +43,8 @@ export default function App() {
       <Router>
         <div>
           <Nav />
-          <Calculator />
-          <AuraCalendar />
+          {/* <Calculator />
+          <AuraCalendar /> */}
           <WeatherCard />
           <Routes>
             <Route path="/" element={<Home />} />

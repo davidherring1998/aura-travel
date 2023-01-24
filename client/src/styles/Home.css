@@ -13,6 +13,7 @@ body {
     background-color: black;
 }
 
+
 .viewFormBox {
     margin-left: 150px;
     margin-right: 150px;
@@ -54,6 +55,13 @@ body {
     height: 25px;
     color: aliceblue;
     background-color: black;
+}
+.viewContainer {
+    margin-bottom: 50px;
+}
+
+.viewPost {
+    margin-bottom: 50px;
 }
 ::placeholder {
     color: aliceblue;

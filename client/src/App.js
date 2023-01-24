@@ -42,13 +42,13 @@ export default function App() {
       <Router>
         <div>
           <Nav />
-          <Maps />
+          {/* <Maps /> */}
           {/* <Calculator />
           <AuraCalendar /> */}
 
-          <WeatherCard />
+          {/* <WeatherCard /> */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />

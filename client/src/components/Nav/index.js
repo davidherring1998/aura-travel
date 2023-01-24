@@ -18,9 +18,9 @@ function Nav() {
           <Link to="/" className="buttonNav">
             Home
           </Link>
-          <Link to="/profile" className="buttonNav">
+          {/* <Link to="/profile" className="buttonNav">
             Profile
-          </Link>
+          </Link> */}
           <Link to="/tools" className="buttonNav">
             Tools{" "}
           </Link>

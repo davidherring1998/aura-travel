@@ -32,10 +32,7 @@ const userSchema = new Schema({
     minlength: 8,
     maxLength: 16,
   },
-  views: {
-    type: Schema.Types.ObjectId,
-    ref: "View",
-  },
+  views: [View.schema],
 });
 
 userSchema.pre("save", async function (next) {

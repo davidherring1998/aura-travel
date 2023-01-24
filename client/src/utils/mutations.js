@@ -29,7 +29,6 @@ export const ADD_USER = gql`
       token
       user {
         _id
-        userName
       }
     }
   }
@@ -39,9 +38,8 @@ export const ADD_VIEW = gql`
   mutation addView($viewText: String!) {
     addView(viewText: $viewText) {
       token
-      user {
+      view {
         _id
-        viewText
       }
     }
   }

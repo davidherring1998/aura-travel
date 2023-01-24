@@ -44,3 +44,14 @@
     margin-top: 5px;
     font-size: 50px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    .calculatorContainer {
+      width: 100%;
+      padding-left: 23px;
+      flex-direction: column-reverse;
+    }
+    .boxes {
+      width: 100%;
+    }
+  }

@@ -24,6 +24,7 @@ export default function ToolNavigation() {
     <div>
       <Tools currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
+      
     </div>
   );
 }

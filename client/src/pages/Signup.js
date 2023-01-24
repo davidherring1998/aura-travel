@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { fromPromise, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import "../styles/Login.css";
 import { ADD_USER } from "../utils/mutations";
@@ -13,11 +13,11 @@ function SignUp(props) {
     email: "",
     password: "",
   });
-  const [addUser] = useMutation(ADD_USER);
+  const [addUser]= useMutation(ADD_USER);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const mutationResponse = await AudioScheduledSourceNode({
+    const mutationResponse = await addUser({
       variables: {
         userName: formState.userName,
         firstName: formState.firstName,
@@ -43,7 +43,7 @@ function SignUp(props) {
         Click here to sign up!
       </Link>
       <h1>SignUp</h1>
-      <form onSubmit={{ handleFormSubmit }}>
+      <form onSubmit={ handleFormSubmit }>
         <div>
           <label className="loginLabel" htmlFor="userName">
             Username:

@@ -3,6 +3,7 @@ import "../../styles/Tools.css";
 // import ToolNavigation from "./CurrentTool";
 
 import Calculator from "../../components/Tools/Calculator/Calculator";
+import Calender from "../../components/Tools/Calendar/Calendar";
 
 
 function Tools(handlePageChange) {
@@ -24,12 +25,13 @@ function Tools(handlePageChange) {
               <span onClick={() => handlePageChange("Navigation")}>Navigation</span>
             </div>
           </div>
-          {/* <div className="translator">
+          <div className="calender">
             <div className="widgetContainer">
-              <span>Translator</span>
+              <span>Calender</span>
             </div>
-          </div> */}
+          </div>
         <Calculator /> 
+        <Calender />
       </div>
     </section>
   );

@@ -65,6 +65,9 @@ body {
 }
 .viewContainer {
     margin-bottom: 50px;
+    background-color: #0D5D56;;
+    border: solid 2px black;
+    border-radius: 12px;
 }
 
 .viewPost {

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb86d134.css",
+    "main.css": "/static/css/main.74d82068.css",
     "main.js": "/static/js/main.6fa52c75.js",
     "static/media/circlelogo.png": "/static/media/circlelogo.71493c1245916fe7ebe1.png",
     "index.html": "/index.html",
-    "main.fb86d134.css.map": "/static/css/main.fb86d134.css.map",
+    "main.74d82068.css.map": "/static/css/main.74d82068.css.map",
     "main.6fa52c75.js.map": "/static/js/main.6fa52c75.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb86d134.css",
+    "static/css/main.74d82068.css",
     "static/js/main.6fa52c75.js"
   ]
 }

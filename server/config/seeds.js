@@ -6,24 +6,21 @@ db.once("open", async () => {
 
   const views = await View.insertMany([
     {
-      viewText:
-        "Hey this is working// Lorem Ipewrwersum is simply dummy text of the printing and typesetting industry",
+      viewText: "My time in Colorado was really great!",
     },
     {
       viewText:
-        "Lorem Iewwerpsum is simply dummy text of the printing and typesetting industry",
+        "This restaurant was not great if your ever in New York don't go here ",
     },
     {
       viewText:
-        "Lorem Ipsuewrewm is simply dummy text of the printing and typesetting industry",
+        "Florida is way to populated but a lot of amusement parks avoid the beaches",
     },
     {
-      viewText:
-        "Lorem Ipserweum is simply dummy text of the printing and typesetting industry",
+      viewText: "Alaska was amazing a beautiful trip",
     },
     {
-      viewText:
-        "Lorem Ipwerewsum is simply dummy text of the printing and typesetting industry",
+      viewText: "You should visit Chattanooga Tn the views are incredible",
     },
   ]);
 
@@ -48,6 +45,14 @@ db.once("open", async () => {
       waveBody:
         " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
     },
+    {
+      waveBody:
+        " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+    {
+      waveBody:
+        " this is working Loresdaagfm Ipsum is simply dummy text of the printing and typesetting industry",
+    },
   ]);
 
   console.log("waves seeded..");
@@ -55,10 +60,10 @@ db.once("open", async () => {
   await User.deleteMany();
 
   await User.create({
-    userName: "hey",
-    firstName: "fname",
-    lastName: "lname",
-    email: "email@you.com",
+    userName: "jswearingen",
+    firstName: "Jeremiah",
+    lastName: "Swearingen",
+    email: "jswearingen18@gmail.com",
     password: "abc12345",
     views: [
       {
@@ -68,10 +73,10 @@ db.once("open", async () => {
     ],
   });
   await User.create({
-    userName: "testUserTwo",
-    firstName: "fname",
-    lastName: "lname",
-    email: "emailTwo@email.com",
+    userName: "LINZ",
+    firstName: "Lindsay",
+    lastName: "Bae",
+    email: "LINZB@gmail.com",
     password: "abc12345",
     views: [
       {
@@ -81,9 +86,9 @@ db.once("open", async () => {
     ],
   });
   await User.create({
-    userName: "testUserThree",
-    firstName: "fname",
-    lastName: "lname",
+    userName: "DHerring",
+    firstName: "David",
+    lastName: "Herring",
     email: "emailThree@email.com",
     password: "abc12345",
     views: [
@@ -94,15 +99,28 @@ db.once("open", async () => {
     ],
   });
   await User.create({
-    userName: "testUserFour",
-    firstName: "fname",
-    lastName: "lname",
+    userName: "ShelB",
+    firstName: "Shelby",
+    lastName: "Bridwell",
     email: "emailFour@email.com",
     password: "abc12345",
     views: [
       {
         viewText: views[1].viewText,
         wave: wave[2]._id,
+      },
+    ],
+  });
+  await User.create({
+    userName: "crunkichu",
+    firstName: "Crunk",
+    lastName: "Pichachu",
+    email: "email5@email.com",
+    password: "abc12345",
+    views: [
+      {
+        viewText: views[4].viewText,
+        wave: wave[4]._id,
       },
     ],
   });

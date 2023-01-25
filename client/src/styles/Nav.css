@@ -101,7 +101,7 @@ footer p {
     color: white;
     margin-left: 20px;
     margin-right: 20px;
-    /* margin-bottom: 5%; */
+     margin-bottom: 5%; 
     margin-top: -15px;
     font-size: 1rem;
 }
@@ -115,7 +115,7 @@ nav .buttonNav {
     white-space: nowrap;
 }
 
-/* .calendarContainer {
+ .calendarContainer {
     margin-bottom: 250px;
     border: solid 5px;
     margin-left: 30px;
@@ -145,7 +145,7 @@ nav .buttonNav {
     margin-left: 30px;
     margin-right: 30px;
     padding-bottom: 30px;
-} */
+} 
 
 .iconBox {
     border: solid 3px;
@@ -183,14 +183,14 @@ nav .buttonNav {
       font-size: 20px;
     }
   }
-/* @media screen and (max-width: 600px) {
+ @media screen and (max-width: 600px) {
     nav a {
       float: none;
       width: 100%;
     }
-} */
+} 
 
-/* @keyframes background-pan {
+ @keyframes background-pan {
     from {
         background-position: 0% center;
     }
@@ -207,4 +207,4 @@ nav .buttonNav {
     .container header .header-nav-area #nav_container  {
       display:flex;
     }
-  } */
+  } 
